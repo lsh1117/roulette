@@ -29,6 +29,9 @@
 	const segmentCount = computed(() => markets.value.length);
 	const segmentAngle = computed(() => (2 * Math.PI) / segmentCount.value);
 
+	// 컬러 코드값
+	const categoryColors = computed(() => marketStore.categoryColors);
+
 	const drawRoulette = () => {
 		const canvas = canvasRef.value;
 		if (!canvas) return;
@@ -50,7 +53,10 @@
 			ctx.arc(centerX, centerY, radius, startAngle, endAngle);
 			ctx.closePath();
 
-			ctx.fillStyle = index % 2 === 0 ? '#f4a261' : '#e76f51'; // 색상 변경
+			const category = market.category;
+			const fillColor = categoryColors.value[category] || '#ccc'; // 기본 색상
+
+			ctx.fillStyle = fillColor;
 			ctx.fill();
 			ctx.stroke();
 
@@ -146,7 +152,7 @@
 		color: white;
 		border: none;
 		cursor: pointer;
-		margin-top: 10px;
+		margin-top: 30px;
 	}
 
 	.result {
