@@ -38,13 +38,14 @@ export default defineConfig(({ command }) => {
             }
             // 폰트 파일은 font 폴더에 저장
             if (assetInfo.name && /\.(png?|svg|jpg|gif)$/i.test(assetInfo.name)) {
-              return 'assets/images/[name][extname]'
+              return 'assets/img/[name][extname]'
             }
             // 그 외 파일은 기본 assets 폴더에 저장
             return 'assets/[name][extname]'
           },
         }
       }
-    }
+    },
+    publicDir: 'public'
   };
 });
