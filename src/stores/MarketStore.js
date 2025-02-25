@@ -10,23 +10,23 @@ export const useMarketStore = defineStore('marketStore', {
 			},
 			{
 				name: "동원(감자탕)",
-				category: "jung",
+				category: "han",
 			},
 			{
 				name: "오징어풍경",
-				category: "yang",
+				category: "han",
 			},
 			{
 				name: "나주곰탕",
-				category: "il",
+				category: "han",
 			},
 			{
 				name: "이화수육개장",
-				category: "bun",
+				category: "han",
 			},
 			{
 				name: "오는정(생선구이)",
-				category: "fast",
+				category: "han",
 			},
 			{
 				name: "뼈해장국",
