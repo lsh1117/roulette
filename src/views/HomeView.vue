@@ -168,6 +168,10 @@
 			height:270px;
 		}
 		.arrow {
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			border-bottom: 15px solid red;
+			right:-12px;
 		}
 	}
 
@@ -178,6 +182,10 @@
 			height:320px;
 		}
 		.arrow {
+			right:-15px;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: 20px solid red;
 		}
 	}
 </style>
