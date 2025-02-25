@@ -1,6 +1,6 @@
 <template>
 	<div class="roulette-container">
-		<canvas ref="canvasRef" width="500" height="500"></canvas>
+		<canvas ref="canvasRef" width="500" height="500" class="roulette"></canvas>
 		<div class="arrow"></div>
 		<button @click="startRoulette" :disabled="isSpinning">START</button>
 		<p v-if="selectedMarket" class="result">오늘의 점심은 <strong>{{ selectedMarket }}</strong>!</p>
@@ -111,24 +111,26 @@
 
 <style scoped>
 	.roulette-container {
+		width:500px;
+		height:500px;
+		margin:0 auto;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		position: relative;
-		margin-top:40px;
 	}
 
 	canvas {
+		width:100%;
 		border-radius: 50%;
 		border: 2px solid #333;
-		margin-bottom: 20px;
 		transition: transform 0.5s ease-out;
 	}
 
 	.arrow {
 		position: absolute;
-		top: 250px;
-		left:calc(50% + 250px);
+		top: 50%;
+		right:-30px;
 		width: 0;
 		height: 0;
 		border-left: 15px solid transparent;
@@ -153,4 +155,23 @@
 		color:#FFF;
 	}
 
+	@media screen and (max-width: 360px) {
+	/*코드 작성*/
+		.roulette-container{
+			width:270px;
+			height:270px;
+		}
+		.arrow {
+		}
+	}
+
+	@media screen and (min-width: 360px) and (max-width: 570px) {
+	/*코드 작성*/
+		.roulette-container{
+			width:320px;
+			height:320px;
+		}
+		.arrow {
+		}
+	}
 </style>
