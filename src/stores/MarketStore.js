@@ -36,6 +36,14 @@ export const useMarketStore = defineStore('marketStore', {
 				name: "오봉집",
 				category: "han",
 			},
+            {
+				name: "고려보쌈",
+				category: "han",
+			},
+            {
+				name: "부산아지매국밥",
+				category: "han",
+			},
 		],
 		categoryColors: {
 			han: '#D94F30', //
