@@ -14,15 +14,15 @@ export const useMarketStore = defineStore('marketStore', {
 			},
 			{
 				name: "오징어풍경",
-				category: "en",
+				category: "kr",
 			},
 			{
 				name: "나주곰탕",
-				category: "cn",
+				category: "kr",
 			},
 			{
 				name: "이화수육개장",
-				category: "jp",
+				category: "kr",
 			},
 			{
 				name: "오는정(생선구이)",
@@ -61,14 +61,14 @@ export const useMarketStore = defineStore('marketStore', {
 			fast: '#C70039', // 
 		},
 		categoryImages: {
-			kr: 'ico_flag_kr.svg', //
-			cn: 'ico_flag_cn.svg', //
-			en: 'ico_flag_en.svg', //
-			jp: 'ico_flag_jp.svg', // 
-			th: 'ico_flag_th.svg', // 
-			vn: 'ico_flag_vn.svg', // 
-			bun: 'ico_flag_kr.svg', //
-			fast: 'ico_flag_kr.svg', // 
+			kr: 'ico_flag_kr.png', //
+			cn: 'ico_flag_cn.png', //
+			en: 'ico_flag_en.png', //
+			jp: 'ico_flag_jp.png', // 
+			th: 'ico_flag_th.png', // 
+			vn: 'ico_flag_vn.png', // 
+			bun: 'ico_flag_kr.png', //
+			fast: 'ico_flag_kr.png', // 
 		}
 	}),
 	actions: {
