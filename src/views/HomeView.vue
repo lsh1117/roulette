@@ -38,7 +38,7 @@
 			markets.value.map((market) => {
 				return new Promise((resolve) => {
 					const img = new Image();
-					img.src = `/assets/images/ico_flag_${market.category}.png`;
+					img.src = `./assets/images/ico_flag_${market.category}.png`;
 					img.onload = () => resolve({
 						category: market.category,
 						img
