@@ -1,16 +1,38 @@
 <!-- src/App.vue -->
 <template>
-  <!-- 라우트에 따라 컴포넌트가 렌더링됨 -->
-  <router-view /> 
-  <!-- 팝업 -->
-  <PopupManager/>
+	<div class="app-container">
+		<router-view />
+		<PopupManager />
+		<CanvasTransition ref="canvasTransition" />
+	</div>
 </template>
 
 <script setup>
-// 특별한 설정 필요 없음
-import PopupManager from '@/components/cmm/PopupManager.vue';
+	import {
+		ref
+	} from 'vue'
+	import {
+		useRouter
+	} from 'vue-router'
+	import CanvasTransition from '@/components/CanvasTransition.vue'
+
+	const canvasTransition = ref(null)
+	const router = useRouter()
+
+	router.beforeEach((to, from, next) => {		
+		canvasTransition.value.startAnimation(() => {
+			next()
+		})
+	})
+
 </script>
 
-<style>
-/* 전역 스타일 (필요시) */
+<style scoped>
+	.app-container {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		height: 100vh;
+	}
+
 </style>

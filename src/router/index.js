@@ -12,6 +12,18 @@ const routes = [
         name: 'HomeView',
         component: () => import(/* webpackChunkName: "home" */ '../views/HomeView.vue'),
         meta: { hidden: true }
+      },
+      {
+        path: 'portfolio',
+        name: 'Portfolio',
+        component: () => import(/* webpackChunkName: "portfolio" */ '../views/Portfolio.vue'),
+        meta: { hidden: true }
+      },
+      {
+        path: 'about',
+        name: 'About',
+        component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+        meta: { hidden: true }
       }
     ],
   },

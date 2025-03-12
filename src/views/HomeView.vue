@@ -74,8 +74,6 @@
 			const category = market.category;
 			const fillColor = categoryColors.value[category] || '#ccc'; // 기본 색상;
 			const imgObj = images.find((img) => img.category === market.category);
-
-			console.log("#########",imgObj)
 			
 			if (imgObj) {
 				ctx.save();

@@ -48,7 +48,30 @@ export const useMarketStore = defineStore('marketStore', {
 				name: "오마이포(쌀국수)",
 				category: "vn",
 			},
-            
+            {
+				name: "알돈",
+				category: "jp",
+			},
+			{
+				name: "가쯔야",
+				category: "jp",
+			},
+			{
+				name: "원흥",
+				category: "cn",
+			},
+			{
+				name: "용호동낙지",
+				category: "kr",
+			},
+			{
+				name: "당대일품",
+				category: "cn",
+			},
+			{
+				name: "사이공",
+				category: "vn",
+			},
 		],
 		categoryColors: {
 			kr: '#D94F30', //
