@@ -21,7 +21,9 @@
 
 	router.beforeEach((to, from, next) => {		
 		canvasTransition.value.startAnimation(() => {
-			next()
+			setTimeout(function(){
+				next();
+			},500)
 		})
 	})
 
