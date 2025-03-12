@@ -50,7 +50,7 @@
 	}
 
 	function loadMusic() {
-		const audio = new Audio('../mp3/Jackson.mp3');
+		const audio = new Audio('/assets/mp3/motivation.mp3');
 		const audioContext = new(window.AudioContext || window.webkitAudioContext)();
 		const source = audioContext.createMediaElementSource(audio);
 		analyser = audioContext.createAnalyser();
